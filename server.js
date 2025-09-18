@@ -16,11 +16,13 @@ app.set("view engine", "ejs");
 // ejs orqali html yani frontendni backendni ichida yasaymiz.
 
 // 4 Routing code
-app.get("/hello", function (req, res) {
-    res.end(`<h1 style="background: red">HELLO WORLD by Bekhruzbek</h1>`);
-});
-app.get("/gift", function (req, res) {
-    res.end(`<h1>Siz sovg'alar bo'limidasiz</h1>`);
+app.post("/create-item", (req, res) => {
+    console.log(req);
+    res.json({test: "success" });
+})
+
+app.get("/", function(req, res) {
+    res.render("harid");
 });
 
 
