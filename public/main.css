@@ -463,6 +463,80 @@
     margin-left: 583.3px;
 }
 
+
+.middUp_frame .shapes_1 {
+    position: absolute;
+
+    margin-top: 37.74px;
+    margin-right: 918.83px;
+    margin-bottom: 399.63px;
+    margin-left: 36.05px;
+}
+
+.middUp_frame .shapes_2 {
+    position: absolute;
+    
+    margin-top: 59.07px;
+    margin-right: 438.44px;
+    margin-bottom: 378.29px;
+    margin-left: 516.55px;
+}
+
+.middUp_frame .shapes_3 {
+    width: 15.921px;
+    height: 15.614px;
+    transform: rotate(26.495deg);
+    border: 2px solid rgba(255, 180, 0, 0.80);
+
+    position: absolute;
+    
+    margin-top: 76.2px;
+    margin-right: 57.2px;
+    margin-bottom: 355.93px;
+    margin-left: 892.37px;
+}
+
+.middUp_frame .shapes_4 {
+    position: absolute;
+    
+    margin-top: 417.89px;
+    margin-right: 870.88px;
+    margin-bottom: 19.48px;
+    margin-left: 84.1px;
+}
+
+.middUp_frame .shapes_5 {
+    width: 15.921px;
+    height: 15.614px;
+    transform: rotate(26.495deg);
+    border: 2px solid rgba(0, 71, 255, 0.80);
+
+    position: absolute;
+
+    margin-top: 329.64px;
+    margin-right: 579.18px;
+    margin-bottom: 102.49px;
+    margin-left: 370.4px;
+}
+
+.middUp_frame .shapes_6 {
+    position: absolute;
+
+    margin-top: 377.12px;
+    margin-right: 400.53px;
+    margin-bottom: 60.24px;
+    margin-left: 554.45px;
+}
+
+.middUp_frame .shapes_7 {
+    position: absolute;
+
+    margin-top: 422.74px;
+    margin-right: 37.02px;
+    margin-bottom: 14.63px;
+    margin-left: 917.96px;
+}
+
 .midd_frame .middDown_frame {
     width: 970px;
     height: 650.921px;
@@ -654,4 +728,78 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.right_frame .right-1 {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 50px;
+}
+
+.right_frame .right-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 174px;
+}
+
+.right-2 .right-2-1 {
+    display: inline-block;
+    position: relative;  /* pseudo-elementni joylashtirish uchun */
+    background: #222;          /* quti rangi */
+    color: #fff;               /* matn rangi */
+    padding: 5px 12.7px;        /* quti ichki bo'shligi */
+    border-radius: 3px;       /* yumaloq burchaklar */
+    font-size: 12.5px;           /* misoldagi kattalik */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.right-2 .right-2-1:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8px;   /* uchburchak balandligi bilan moslashtir */
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 9px solid #222; /* uchburchak rangi quti rangi bilan bir xil bo'lsin */
+}
+
+.right-2 .right-2-2 {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    margin-top: 5px;
+    background-color: #FFB400;
+}
+
+.right_frame .right-icons {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    margin-top: 43px;
+
+    background-color: #F0F0F6;
 }
