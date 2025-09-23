@@ -1,3 +1,39 @@
+console.log("TRAIN AREA!");
+// A-Task
+console.log("A-Task");
+
+// Harf sifatida kiritilgan birinchi parametr, 
+// kiritilgan ikkinchi parametr tarkibida nechta ekanligini qaytaruvchi
+// Funktsiya tuzing
+
+// Masalan: countLetter("e", "engineer")
+// 'engineer' so'zi tarkibida 'e' harfi 3 marotaba takrorlanganligi uchun
+// 3 sonini qaytaradi
+
+function countLetter(letter, text) {
+    let count = 0;
+
+    if(typeof text !== 'string'){
+        console.log("Please enter String format text.");
+    } else {
+        let arr1 = [];
+        arr1 = text.split("");
+        const size = arr1.length;
+        for(let i = 0; i <= size; i++){
+            if(letter == arr1[i]) {
+                count++;
+            }
+        }
+        console.log(`"${text}" so'zida "${letter}" harifi ${count} marotaba takrorlandi.`);
+        console.log("Natija: ", count);
+    }
+}
+countLetter("e", "engineer");
+
+
+
+// Callback funtions
+
 // console.log("Jack Ma maslahatlari!");
 // const list = [
 //     "yaxshi talaba bo'ling", // 0~20
@@ -34,34 +70,44 @@
 // console.log("passed here 1");
 
 
-console.log("TRAIN AREA!");
-// A-Task
-console.log("A-Task");
+// Asynchronous functions
 
-// Harf sifatida kiritilgan birinchi parametr, 
-// kiritilgan ikkinchi parametr tarkibida nechta ekanligini qaytaruvchi
-// Funktsiya tuzing
+// async function maslahatBering2(a) {
+//     if (typeof a !== "number") throw new Error("insert a number");
+//     else if (a <= 20) return list[0];
+//     else if (a > 20 && a <= 30) return list[1];
+//     else if (a > 30 && a <= 40) return list[2];
+//     else if (a > 40 && a <= 50) return list[3];
+//     else if (a > 50 && a <= 60) return list[4];
+//     else {
+//         return new Promise((resolve, reject) => {
+//             setTimeout(() => {
+//                 resolve(list[5]);
+//             }, 5000)
+//         });
+//     }
+// }
 
-// Masalan: countLetter("e", "engineer")
-// 'engineer' so'zi tarkibida 'e' harfi 3 marotaba takrorlanganligi uchun
-// 3 sonini qaytaradi
+// then/catch
+// console.log("passed here 0");
+// maslahatBering2(22)
+//     .then((data) => {
+//         console.log("javob:", data);
+//     })
+//     .catch((err) => {
+//         console.log("ERROR:", err);
+//     });
 
-function countLetter(letter, text) {
-    let count = 0;
+// console.log("passed here 1");
 
-    if(typeof text !== 'string'){
-        console.log("Please enter String format text.");
-    } else {
-        let arr1 = [];
-        arr1 = text.split("");
-        const size = arr1.length;
-        for(let i = 0; i <= size; i++){
-            if(letter == arr1[i]) {
-                count++;
-            }
-        }
-        console.log(`"${text}" so'zida "${letter}" harifi ${count} marotaba takrorlandi.`);
-        console.log("Natija: ", count);
-    }
-}
-countLetter("e", "engineer");
+
+// async/await
+// async function run() {
+//     let javob = await maslahatBering2(20);
+//     console.log(javob);
+//     javob = await maslahatBering2(63);
+//     console.log(javob);
+//     javob = await maslahatBering2(42);
+//     console.log(javob);
+// }
+// run();
