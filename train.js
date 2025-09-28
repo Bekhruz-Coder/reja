@@ -1,4 +1,64 @@
 console.log("TRAIN AREA!");
+
+// C-TASK
+console.log("C-TASK");
+const moment = require("moment");
+class Shop {
+    time = moment().format("HH:mm");
+    non = 0;
+    lagmon = 0;
+    cola = 0;
+
+    constructor(non, lagmon, cola) {
+        this.non = non;
+        this.lagmon = lagmon;
+        this.cola = cola;
+    }
+
+    qoldiq() {
+        console.log(`Hozir ${this.time}da ${this.non}ta non, ${this.lagmon}ta lagmon, ${this.cola}ta cola mavjud.`);
+    }
+
+    sotish(string, n) {
+        if(string === "non") {
+            this.non -= n;
+        }else if(string === "lagmon"){
+            this.lagmon -= n;
+        }else if(string === "cola"){
+            this.cola -= n;
+        }
+    }
+
+    qabul(string, n) {
+        if(string === "non") {
+            this.non += n;
+        }else if(string === "lagmon"){
+            this.lagmon += n;
+        }else if(string === "cola"){
+            this.cola += n;
+        }
+    }
+
+}
+// "lag'mon" emas "lagmon" kiriting!!!
+const shop = new Shop(4, 5, 2);
+shop.sotish("non", 3);
+shop.qabul("cola", 4);
+shop.qoldiq();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // A-Task
 // console.log("A-Task");
 
@@ -31,21 +91,21 @@ console.log("TRAIN AREA!");
 // countLetter("e", "engineer");
 
 // B-Task
-function countDigits(text){
-    let count = 0;
-    if(typeof text !== "string"){
-        console.log("Please enter the String");
-        return;
-    } else {
-        let arr = [];
-        arr = text.split('');
-        for(let i = 0; i < arr.length; i++){
-            if(arr[i] >= 0 && arr[i] <= 9){
-                count++;
-            }
-        }
-    }
-    console.log(`Yuqoridagi string tarkibida ${count} dona raqam qatnashganligi uchun, natija: ${count}`);
-}
+// function countDigits(text){
+//     let count = 0;
+//     if(typeof text !== "string"){
+//         console.log("Please enter the String");
+//         return;
+//     } else {
+//         let arr = [];
+//         arr = text.split('');
+//         for(let i = 0; i < arr.length; i++){
+//             if(arr[i] >= 0 && arr[i] <= 9){
+//                 count++;
+//             }
+//         }
+//     }
+//     console.log(`Yuqoridagi string tarkibida ${count} dona raqam qatnashganligi uchun, natija: ${count}`);
+// }
 
-countDigits("ad2a54y79wet0sfgb9");
+// countDigits("ad2a54y79wet0sfgb9");
