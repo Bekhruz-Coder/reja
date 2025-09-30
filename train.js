@@ -22,26 +22,34 @@ class Shop {
     sotish(string, n) {
         if(string === "non") {
             this.non -= n;
-        }else if(string === "lagmon"){
+        }else if(string === "lag'mon" || string === "lagmon"){
             this.lagmon -= n;
         }else if(string === "cola"){
             this.cola -= n;
+        }else {
+            console.log("Iltimos mahsulot nomini to'g'ri kiriting.");
         }
     }
 
     qabul(string, n) {
         if(string === "non") {
             this.non += n;
-        }else if(string === "lagmon"){
+        }else if(string === "lag'mon" || string === "lagmon"){
             this.lagmon += n;
         }else if(string === "cola"){
             this.cola += n;
+        }else {
+            console.log("Iltimos mahsulot nomini to'g'ri kiriting.");
         }
     }
 
 }
-// "lag'mon" emas "lagmon" kiriting!!!
+
 const shop = new Shop(4, 5, 2);
+shop.qoldiq();
+
+console.log("***********************************************");
+
 shop.sotish("non", 3);
 shop.qabul("cola", 4);
 shop.qoldiq();
