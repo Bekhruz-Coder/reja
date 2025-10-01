@@ -1,67 +1,38 @@
 console.log("TRAIN AREA!");
 
-// C-TASK
-console.log("C-TASK");
-const moment = require("moment");
-class Shop {
-    time = moment().format("HH:mm");
-    non = 0;
-    lagmon = 0;
-    cola = 0;
+// D-Task
+console.log("D-Task");
 
-    constructor(non, lagmon, cola) {
-        this.non = non;
-        this.lagmon = lagmon;
-        this.cola = cola;
-    }
-
-    qoldiq() {
-        console.log(`Hozir ${this.time}da ${this.non}ta non, ${this.lagmon}ta lagmon, ${this.cola}ta cola mavjud.`);
-    }
-
-    sotish(string, n) {
-        if(string === "non") {
-            this.non -= n;
-        }else if(string === "lag'mon" || string === "lagmon"){
-            this.lagmon -= n;
-        }else if(string === "cola"){
-            this.cola -= n;
-        }else {
-            console.log("Iltimos mahsulot nomini to'g'ri kiriting.");
+function checkContent(text1, text2) {
+    let same = false;
+    let count = 0;
+    let arr1 = [];
+    let arr2 = [];
+    arr1 = text1.split("");
+    arr2 = text2.split("");
+    if(arr1.length !== arr2.length){
+        same = false;
+        console.log(same);
+    } else {
+        const size = arr1.length;
+        for(let i = 0; i < size; i++) {
+            for(let j = 0; j < size; j++){
+                if(arr1[i] === arr2[j]) {
+                    count++;
+                    arr2.splice(j, 1);
+                }
+            }
+        }
+        if(count == size){
+            same = true;
+            console.log(same);
+        } else {
+            console.log(same);
         }
     }
-
-    qabul(string, n) {
-        if(string === "non") {
-            this.non += n;
-        }else if(string === "lag'mon" || string === "lagmon"){
-            this.lagmon += n;
-        }else if(string === "cola"){
-            this.cola += n;
-        }else {
-            console.log("Iltimos mahsulot nomini to'g'ri kiriting.");
-        }
-    }
-
 }
 
-const shop = new Shop(4, 5, 2);
-shop.qoldiq();
-
-console.log("***********************************************");
-
-shop.sotish("non", 3);
-shop.qabul("cola", 4);
-shop.qoldiq();
-
-
-
-
-
-
-
-
-
+checkContent("mitgroup", "gmtiprou");
 
 
 
@@ -117,3 +88,60 @@ shop.qoldiq();
 // }
 
 // countDigits("ad2a54y79wet0sfgb9");
+
+
+
+
+// // C-TASK
+// console.log("C-TASK");
+// const moment = require("moment");
+// class Shop {
+//     time = moment().format("HH:mm");
+//     non = 0;
+//     lagmon = 0;
+//     cola = 0;
+
+//     constructor(non, lagmon, cola) {
+//         this.non = non;
+//         this.lagmon = lagmon;
+//         this.cola = cola;
+//     }
+
+//     qoldiq() {
+//         console.log(`Hozir ${this.time}da ${this.non}ta non, ${this.lagmon}ta lagmon, ${this.cola}ta cola mavjud.`);
+//     }
+
+//     sotish(string, n) {
+//         if(string === "non") {
+//             this.non -= n;
+//         }else if(string === "lag'mon" || string === "lagmon"){
+//             this.lagmon -= n;
+//         }else if(string === "cola"){
+//             this.cola -= n;
+//         }else {
+//             console.log("Iltimos mahsulot nomini to'g'ri kiriting.");
+//         }
+//     }
+
+//     qabul(string, n) {
+//         if(string === "non") {
+//             this.non += n;
+//         }else if(string === "lag'mon" || string === "lagmon"){
+//             this.lagmon += n;
+//         }else if(string === "cola"){
+//             this.cola += n;
+//         }else {
+//             console.log("Iltimos mahsulot nomini to'g'ri kiriting.");
+//         }
+//     }
+
+// }
+
+// const shop = new Shop(4, 5, 2);
+// shop.qoldiq();
+
+// console.log("***********************************************");
+
+// shop.sotish("non", 3);
+// shop.qabul("cola", 4);
+// shop.qoldiq();
