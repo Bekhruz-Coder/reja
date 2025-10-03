@@ -1,39 +1,18 @@
 console.log("TRAIN AREA!");
 
-// D-Task
-console.log("D-Task");
+// E-Task
+console.log("E-Task");
 
-function checkContent(text1, text2) {
-    let same = false;
-    let count = 0;
-    let arr1 = [];
-    let arr2 = [];
-    arr1 = text1.split("");
-    arr2 = text2.split("");
-    if(arr1.length !== arr2.length){
-        same = false;
-        console.log(same);
+function getReverse(text) {
+    if (typeof text !== "string") {
+        console.log("Please input string format text!");
     } else {
-        const size = arr1.length;
-        for(let i = 0; i < size; i++) {
-            for(let j = 0; j < size; j++){
-                if(arr1[i] === arr2[j]) {
-                    count++;
-                    arr2.splice(j, 1);
-                }
-            }
-        }
-        if(count == size){
-            same = true;
-            console.log(same);
-        } else {
-            console.log(same);
-        }
+        reversedText = text.split("").reverse().join("");
+        console.log(reversedText);
     }
 }
 
-checkContent("mitgroup", "gmtiprou");
-
+getReverse("Hello");
 
 
 
@@ -145,3 +124,40 @@ checkContent("mitgroup", "gmtiprou");
 // shop.sotish("non", 3);
 // shop.qabul("cola", 4);
 // shop.qoldiq();
+
+
+
+
+// D-Task
+// console.log("D-Task");
+
+// function checkContent(text1, text2) {
+//     let same = false;
+//     let count = 0;
+//     let arr1 = [];
+//     let arr2 = [];
+//     arr1 = text1.split("");
+//     arr2 = text2.split("");
+//     if(arr1.length !== arr2.length){
+//         same = false;
+//         console.log(same);
+//     } else {
+//         const size = arr1.length;
+//         for(let i = 0; i < size; i++) {
+//             for(let j = 0; j < size; j++){
+//                 if(arr1[i] === arr2[j]) {
+//                     count++;
+//                     arr2.splice(j, 1);
+//                 }
+//             }
+//         }
+//         if(count == size){
+//             same = true;
+//             console.log(same);
+//         } else {
+//             console.log(same);
+//         }
+//     }
+// }
+
+// checkContent("mitgroup", "gmtiprou");
