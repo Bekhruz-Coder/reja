@@ -1,18 +1,26 @@
 console.log("TRAIN AREA!");
 
-// E-Task
-console.log("E-Task");
+// F-Task
+console.log("F-Task");
 
-function getReverse(text) {
+function findDoublers(text) {
     if (typeof text !== "string") {
-        console.log("Please input string format text!");
+        console.log("Please input string format text.");
     } else {
-        reversedText = text.split("").reverse().join("");
-        console.log(reversedText);
+        arr1 = text.split("");
+        let double = false;
+        for(let i = 0; i < arr1.length; i++) {
+            for(let j = i+1; j < arr1.length; j++) {
+                if(arr1[i] === arr1[j]){
+                    double = true;
+                }
+            }
+        }
+        console.log(double);
     }
 }
 
-getReverse("Hello");
+findDoublers("hello");
 
 
 
@@ -161,3 +169,19 @@ getReverse("Hello");
 // }
 
 // checkContent("mitgroup", "gmtiprou");
+
+
+
+// E-Task
+// console.log("E-Task");
+
+// function getReverse(text) {
+//     if (typeof text !== "string") {
+//         console.log("Please input string format text!");
+//     } else {
+//         reversedText = text.split("").reverse().join("");
+//         console.log(reversedText);
+//     }
+// }
+
+// getReverse("Hello");
